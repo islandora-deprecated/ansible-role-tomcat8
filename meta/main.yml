@@ -1,0 +1,23 @@
+---
+galaxy_info:
+  author: Islandora
+  description: Ansible Galaxy role for installing Tomcat 8
+  company: Islandora Foundation
+  license: MIT
+  min_ansible_version: 2.0
+  max_ansible_version: 2.3
+  platforms:
+  - name: Ubuntu
+    versions:
+    - xenial
+  - name: EL
+    versions:
+      - 7
+  galaxy_tags:
+    - tomcat
+    - islandora
+    - CLAW
+    - servlet
+    - container
+    - installer
+    - web
