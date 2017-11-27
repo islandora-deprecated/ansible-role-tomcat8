@@ -5,6 +5,10 @@ tomcat8_admin_packages:
 
 tomcat8_home: /var/lib/tomcat8
 
+# /etc/sysconfig in Centos/RHEL
+# This should be a choice based on OS.
+tomcat8_system_defaults_dir: /etc/defaults
+
 tomcat8_admin_install: yes
 
 tomcat8_roles: []

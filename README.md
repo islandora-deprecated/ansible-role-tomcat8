@@ -26,6 +26,13 @@ Directory to install Tomcat into
 tomcat8_home: /var/lib/tomcat8
 ```
 
+OS specific defaults directory.
+```
+# /etc/sysconfig in Centos/RHEL
+# This should be a choice based on OS.
+tomcat8_system_defaults_dir: /etc/defaults
+```
+
 Whether to install the Tomcat administrative interface
 ```
 tomcat8_admin_install: yes
@@ -47,6 +54,8 @@ tomcat8_server_user: tomcat8
 tomcat8_server_group: tomcat8
 ```
 
+There are additional configuration options in [defaults/main.yml](defaults/main.yml)
+
 ## Dependencies
 
   None
@@ -55,7 +64,7 @@ tomcat8_server_group: tomcat8
 
     - hosts: webservers
       roles:
-        - { role: islandora.tomcat8 }
+        - { role: Islandora-Devops.tomcat8 }
 
 ## License
 
