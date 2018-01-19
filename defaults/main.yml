@@ -3,7 +3,7 @@ tomcat8_packages:
 tomcat8_admin_packages:
   - tomcat8-admin
 
-tomcat8_home: /var/lib/tomcat8
+tomcat8_home: "{% if ansible_os_family == 'RedHat' %}/opt/tomcat{% else %}/var/lib/tomcat8{% endif %}"
 
 tomcat8_admin_install: yes
 
@@ -12,6 +12,7 @@ tomcat8_users: []
 
 tomcat8_server_user: tomcat8
 tomcat8_server_group: tomcat8
+tomcat8_user_home: /home/tomcat8
 
 # The home directory of the Java development kit (JDK). You need at least
 # JDK version 7. If JAVA_HOME is not set, some common directories for

@@ -1,0 +1,30 @@
+---
+
+- name: server configuration
+  template:
+    src: server.xml.j2
+    dest: "{{ tomcat_conf_dir }}/server.xml"
+  notify: restart tomcat8
+  sudo: True
+
+- name: template tomcat-users.xml
+  template:
+    src: tomcat-users.xml.j2
+    dest: "{{ tomcat_conf_dir }}/tomcat-users.xml"
+    owner: "{{ tomcat8_server_user }}"
+    group: "{{ tomcat8_server_group }}"
+    mode: "640"
+  notify: restart tomcat8
+
+- name: template /etc/default/tomcat8
+  template:
+    src: tomcat-defaults.j2
+    dest: /etc/default/tomcat8
+  notify: restart tomcat8
+
+- name: start tomcat
+  service:
+    name: "{{tomcat_service_name}}"
+    state: started
+    enabled: yes
+  sudo: True
