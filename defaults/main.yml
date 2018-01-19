@@ -3,7 +3,7 @@ tomcat8_packages:
 tomcat8_admin_packages:
   - tomcat8-admin
 
-tomcat8_home: /var/lib/tomcat8
+tomcat_service_name:   tomcat8
 
 tomcat8_admin_install: yes
 
@@ -12,6 +12,7 @@ tomcat8_users: []
 
 tomcat8_server_user: tomcat8
 tomcat8_server_group: tomcat8
+tomcat8_user_home: /home/tomcat8
 
 # The home directory of the Java development kit (JDK). You need at least
 # JDK version 7. If JAVA_HOME is not set, some common directories for
@@ -46,3 +47,11 @@ tomcat8_java_opts:
 # do not need authbind.  It is used for binding Tomcat to lower port numbers.
 # (yes/no, default: no)
 #tomcat8_authbind: no
+
+# Some OS-specific variables are set in vars/* but can be overridden here:
+# tomcat8_home: /opt/tomcat
+#
+# Tomcat binary to dl and related path (For installing binaries on CentOS/RH)
+# tomcat8_version: 8.5.27
+# tomcat_binary_url:  "http://www-eu.apache.org/dist/tomcat/tomcat-8/v{{ tomcat8_version }}/bin/apache-tomcat-{{ tomcat8_version }}.tar.gz"
+# tomcat_target_dir:  "/opt/apache-tomcat-{{ tomcat8_version }}"

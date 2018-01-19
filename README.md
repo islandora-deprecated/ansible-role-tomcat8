@@ -47,10 +47,22 @@ tomcat8_server_user: tomcat8
 tomcat8_server_group: tomcat8
 ```
 
+Some OS-specific variables are set in vars/* but can be overridden
+```
+tomcat8_home: /opt/tomcat
+```
+
+Including these only used by CentOS/RH
+```
+tomcat8_version: 8.5.27
+tomcat_binary_url:  "http://www-eu.apache.org/dist/tomcat/tomcat-8/v{{ tomcat8_version }}/bin/apache-tomcat-{{ tomcat8_version }}.tar.gz"
+tomcat_target_dir:  "/opt/apache-tomcat-{{ tomcat8_version }}"
+```
+
 ## Dependencies
 
   None
-  
+
 ## Example Playbook
 
     - hosts: webservers
