@@ -9,7 +9,7 @@
     - tomcat8
     - tomcat8-install
 
-- include: "config-{{ ansible_os_family }}.yml"
+- include: config.yml
   static: no
   tags:
     - tomcat8

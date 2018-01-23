@@ -3,7 +3,7 @@ tomcat8_packages:
 tomcat8_admin_packages:
   - tomcat8-admin
 
-tomcat8_home: "{% if ansible_os_family == 'RedHat' %}/opt/tomcat{% else %}/var/lib/tomcat8{% endif %}"
+tomcat_service_name:   tomcat8
 
 tomcat8_admin_install: yes
 
