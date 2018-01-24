@@ -5,7 +5,7 @@
     src: tomcat-defaults.j2
     dest: /etc/default/tomcat8
   notify: restart tomcat8
-  when: ansible_os_family == 'RedHat'
+  when: ansible_os_family == 'Debian'
 
 - name: template {{tomcat8_home}}/bin/setenv.sh
   template:
