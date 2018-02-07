@@ -14,3 +14,8 @@
     cache_valid_time: 3600
   with_items: "{{ tomcat8_admin_packages }}"
   when: tomcat8_admin_install
+
+- name: start tomcat8
+  service:
+    name: tomcat8
+    state: started
