@@ -47,3 +47,11 @@ tomcat8_java_opts:
 # do not need authbind.  It is used for binding Tomcat to lower port numbers.
 # (yes/no, default: no)
 #tomcat8_authbind: no
+
+# Some OS-specific variables are set in vars/* but can be overridden here:
+# __tomcat8_home: /opt/tomcat
+#
+# Tomcat binary to dl and related path (For installing binaries on CentOS/RH)
+# __tomcat8_version: 8.5.27
+# __tomcat_binary_url:  "http://www-eu.apache.org/dist/tomcat/tomcat-8/v{{ tomcat8_version }}/bin/apache-tomcat-{{ tomcat8_version }}.tar.gz"
+# __tomcat_target_dir:  "/opt/apache-tomcat-{{ tomcat8_version }}"
