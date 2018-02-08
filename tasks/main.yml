@@ -12,17 +12,23 @@
 - name: Define tomcat8_version
   set_fact:
     tomcat8_version: "{{ __tomcat8_version }}"
-  when: tomcat8_version is not defined
+  when:
+    - tomcat8_version is not defined
+    - __tomcat8_version is defined
 
 - name: Define tomcat_binary_url
   set_fact:
     tomcat_binary_url: "{{ __tomcat_binary_url }}"
-  when: tomcat_binary_url is not defined
+  when:
+    - tomcat_binary_url is not defined
+    - __tomcat_binary_url is defined
 
 - name: Define tomcat_target_dir
   set_fact:
     tomcat_target_dir: "{{ __tomcat_target_dir }}"
-  when: tomcat_target_dir is not defined
+  when:
+    - tomcat_target_dir is not defined
+    - __tomcat_target_dir is defined
 
 - include: "install-{{ ansible_os_family }}.yml"
   tags:
