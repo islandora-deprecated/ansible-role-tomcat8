@@ -30,9 +30,14 @@
     mode: "640"
   notify: restart tomcat8
 
-- name: start tomcat
+- name: template /etc/default/tomcat8
+  template:
+    src: tomcat-defaults.j2
+    dest: /etc/default/tomcat8
+  notify: restart tomcat8
+
+- name: start tomcat8
   service:
     name: "{{tomcat_service_name}}"
     state: started
     enabled: yes
-  sudo: True
