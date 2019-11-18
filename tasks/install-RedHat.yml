@@ -3,7 +3,7 @@
 - name: group add
   group:
     name: "{{ tomcat8_server_group }}"
-  sudo: True
+  become: yes
 
 
 - name: user add
@@ -12,21 +12,21 @@
     group: "{{ tomcat8_server_group }}"
     home: "{{ tomcat8_user_home }}"
     createhome: no
-  sudo: True
+  become: yes
 
 - name: download and extract
   unarchive:
     src: "{{ tomcat_binary_url }}"
     dest: "/opt/"
     remote_src: yes
-  sudo: True
+  become: yes
 
 - name: symlink install directory
   file:
     src: "{{ tomcat_target_dir }}"
     path: "{{ tomcat8_home }}"
     state: link
-  sudo: True
+  become: yes
 
 - name: change ownership of target installation
   file:
@@ -35,9 +35,9 @@
     group: "{{ tomcat8_server_group }}"
     state: directory
     recurse: yes
-  sudo: True
+  become: yes
 
 - name: systemd
   template: src=tomcat.service.j2 dest=/etc/systemd/system/tomcat8.service
   notify: restart tomcat8
-  sudo: True
+  become: yes
