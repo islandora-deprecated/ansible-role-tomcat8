@@ -1,4 +1,4 @@
-# Ansible Role: Tomcat 8 [![Build Status](https://travis-ci.org/Islandora-Devops/ansible-role-tomcat8.svg?branch=master)](https://travis-ci.org/Islandora-Devops/ansible-role-tomcat8)
+# Ansible Role: Tomcat 8 [![Build Status](https://travis-ci.org/Islandora-Devops/ansible-role-tomcat8.svg?branch=main)](https://travis-ci.org/Islandora-Devops/ansible-role-tomcat8)
 
 An Ansible role that installs Tomcat 8 on:
 
