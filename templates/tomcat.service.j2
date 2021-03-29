@@ -4,17 +4,17 @@ After=network.target
 
 [Service]
 Type=forking
-User={{ tomcat8_server_user }}
-Group={{ tomcat8_server_group }}
+User={{ tomcat9_server_user }}
+Group={{ tomcat9_server_group }}
 
-Environment=CATALINA_PID={{ tomcat8_home }}/{{ tomcat_service_name }}.pid
+Environment=CATALINA_PID={{ tomcat9_home }}/{{ tomcat_service_name }}.pid
 Environment=TOMCAT_JAVA_HOME=/usr/java/default
-Environment=CATALINA_HOME={{ tomcat8_home }}
-Environment=CATALINA_BASE={{ tomcat8_home }}
+Environment=CATALINA_HOME={{ tomcat9_home }}
+Environment=CATALINA_BASE={{ tomcat9_home }}
 Environment=CATALINA_OPTS=
 Environment="JAVA_OPTS=-Dfile.encoding=UTF-8 -Dnet.sf.ehcache.skipUpdateCheck=true -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+UseParNewGC -XX:MaxPermSize=128m -Xms512m -Xmx512m"
 
-ExecStart={{ tomcat8_home }}/bin/startup.sh
+ExecStart={{ tomcat9_home }}/bin/startup.sh
 ExecStop=/bin/kill -15 $MAINPID
 
 [Install]

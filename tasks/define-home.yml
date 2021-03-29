@@ -4,17 +4,17 @@
 - name: Include OS-specific variables.
   include_vars: "{{ ansible_os_family }}.yml"
 
-- name: Define tomcat8_home
+- name: Define tomcat9_home
   set_fact:
-    tomcat8_home: "{{ __tomcat8_home }}"
-  when: tomcat8_home is not defined
+    tomcat9_home: "{{ __tomcat9_home }}"
+  when: tomcat9_home is not defined
 
-- name: Define tomcat8_version
+- name: Define tomcat9_version
   set_fact:
-    tomcat8_version: "{{ __tomcat8_version }}"
+    tomcat9_version: "{{ __tomcat9_version }}"
   when:
-    - tomcat8_version is not defined
-    - __tomcat8_version is defined
+    - tomcat9_version is not defined
+    - __tomcat9_version is defined
 
 - name: Define tomcat_binary_url
   set_fact:

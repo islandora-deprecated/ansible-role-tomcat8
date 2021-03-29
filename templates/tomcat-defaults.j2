@@ -1,24 +1,24 @@
-TOMCAT8_USER={{tomcat8_server_user}}
-TOMCAT8_GROUP={{tomcat8_server_group}}
-{% if tomcat8_java_home is defined %}
-JAVA_HOME="{{tomcat8_java_home}}"
+TOMCAT9_USER={{tomcat9_server_user}}
+TOMCAT9_GROUP={{tomcat9_server_group}}
+{% if tomcat9_java_home is defined %}
+JAVA_HOME="{{tomcat9_java_home}}"
 {% endif %}
-JAVA_OPTS="{{tomcat8_java_opts|join(' ')}}"
-{% if tomcat8_jsp_compiler is defined %}
-JSP_COMPILER="{{tomcat8_jsp_compiler}}"
+JAVA_OPTS="{{tomcat9_java_opts|join(' ')}}"
+{% if tomcat9_jsp_compiler is defined %}
+JSP_COMPILER="{{tomcat9_jsp_compiler}}"
 {% endif %}
-{% if tomcat8_tomcat8_security is defined %}
-TOMCAT8_SECURITY="{{tomcat8_tomcat8_security}}"
+{% if tomcat9_tomcat9_security is defined %}
+TOMCAT9_SECURITY="{{tomcat9_tomcat9_security}}"
 {% endif %}
-{% if tomcat8_logfile_days is defined %}
-LOGFILE_DAYS="{{tomcat8_logfile_days}}"
+{% if tomcat9_logfile_days is defined %}
+LOGFILE_DAYS="{{tomcat9_logfile_days}}"
 {% endif %}
-{% if tomcat8_logfile_compress is defined %}
-LOGFILE_COMPRESS="{{tomcat8_logfile_compress}}"
+{% if tomcat9_logfile_compress is defined %}
+LOGFILE_COMPRESS="{{tomcat9_logfile_compress}}"
 {% endif %}
-{% if tomcat8_jvm_tmp is defined %}
-JVM_TMP="{{tomcat8_jvm_tmp}}"
+{% if tomcat9_jvm_tmp is defined %}
+JVM_TMP="{{tomcat9_jvm_tmp}}"
 {% endif %}
-{% if tomcat8_authbind is defined %}
-AUTHBIND="{{tomcat8_authbind}}"
+{% if tomcat9_authbind is defined %}
+AUTHBIND="{{tomcat9_authbind}}"
 {% endif %}
