@@ -1,7 +1,7 @@
 ---
 
-- name: tomcat8 restart tomcat8
+- name: tomcat9 restart tomcat9
   service:
-    name: tomcat8
+    name: tomcat9
     state: restarted
-  listen: "restart tomcat8"
+  listen: "restart tomcat9"

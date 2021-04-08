@@ -2,17 +2,17 @@
 
 - include: "define-home.yml"
   tags:
-    - tomcat8
-    - tomcat8-config
-    - tomcat8-install
+    - tomcat9
+    - tomcat9-config
+    - tomcat9-install
   
 - include: "install-{{ ansible_os_family }}.yml"
   tags:
-    - tomcat8
-    - tomcat8-install
+    - tomcat9
+    - tomcat9-install
 
 - include: config.yml
   static: no
   tags:
-    - tomcat8
-    - tomcat8-config
+    - tomcat9
+    - tomcat9-config
